@@ -3,104 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educational Research Statistical Package (ERSP)</title>
-    <!-- Tailwind CSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Google Font for a clean look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>ERSP - Educational Research Statistical Package</title>
     <style>
+        :root {
+            --bg-color: #e0f2fe; /* Light Blue */
+            --primary-color: #0ea5e9;
+            --button-green: #22c55e;
+            --text-dark: #1e293b;
+            --white: #ffffff;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            flex: 1;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        /* Thin titles as requested */
+        h1 {
+            font-weight: 200;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #0369a1;
+        }
+
+        h2 {
+            font-weight: 300;
+            font-size: 1.2rem;
+            margin-top: 0;
+            color: #475569;
+        }
+
+        .logo-container {
+            margin: 20px auto;
+            width: 120px;
+            height: 120px;
+        }
+
+        .logo-container svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        }
+
+        /* Grid Layout for Buttons */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Large, colorful, stylish buttons */
+        .tool-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            background-color: var(--button-green);
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+            font-size: 1.25rem;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        /* Hover scale transition */
+        .tool-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            background-color: #16a34a;
+        }
+
+        .tool-button i {
+            margin-right: 15px;
+        }
+
+        footer {
+            background-color: var(--white);
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #cbd5e1;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+        }
+
+        .footer-text {
+            font-weight: 400;
+            color: #64748b;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
-<body class="bg-blue-100 min-h-screen flex items-center justify-center p-4">
+<body>
 
-    <!-- Main Container -->
-    <div class="relative w-full max-w-2xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-3xl shadow-2xl p-8 transform transition-all duration-300 hover:scale-105">
-
-        <!-- Logo Image -->
-        <img src="00.png" alt="ERSP Logo" class="absolute top-4 right-4 w-16 h-16 rounded-lg shadow-xl object-cover border-2 border-white">
-
-        <!-- Header Section -->
-        <header class="text-center text-white mb-8 mt-12">
-            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-2">
-                Educational Research Statistical Package (ERSP)
-            </h1>
-            <p class="text-lg sm:text-xl font-medium opacity-90">Developed by Dr. Mazen Badawy – Doctorate of English Teaching & Testing</p>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <!-- SVG Logo Placeholder for ERSP -->
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" fill="#0ea5e9" />
+                    <rect x="30" y="40" width="10" height="30" rx="2" fill="white" />
+                    <rect x="45" y="25" width="10" height="45" rx="2" fill="white" />
+                    <rect x="60" y="35" width="10" height="35" rx="2" fill="white" />
+                </svg>
+            </div>
+            <h1>Educational Research Statistical Package (ERSP)</h1>
+            <h2>Developed by Dr. Mazen Badawy – Doctorate of English Teaching & Testing</h2>
         </header>
 
-        <!-- Buttons Grid -->
-        <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-            <!-- T-Test Button -->
-            <a href="https://mazenegykfs.github.io/t-test/" target="_blank" rel="noopener noreferrer" class="bg-white text-gray-800 p-4 rounded-xl shadow-lg flex items-center justify-center space-x-3 transform transition-transform duration-200 hover:scale-105 hover:shadow-xl hover:bg-gray-100">
-                <i class="fas fa-chart-bar text-xl text-indigo-500"></i>
-                <span class="font-semibold">t-Test</span>
-            </a>
-
-            <!-- Non-Parametric Button -->
-            <a href="https://mazenegykfs.github.io/Non-Parametric/" target="_blank" rel="noopener noreferrer" class="bg-white text-gray-800 p-4 rounded-xl shadow-lg flex items-center justify-center space-x-3 transform transition-transform duration-200 hover:scale-105 hover:shadow-xl hover:bg-gray-100">
-                <i class="fas fa-chart-pie text-xl text-purple-500"></i>
-                <span class="font-semibold">Non-Parametric</span>
-            </a>
-
-            <!-- One-Way ANOVA Button -->
-            <a href="https://mazenegykfs.github.io/One-Way-ANOVA-Calculator/" target="_blank" rel="noopener noreferrer" class="bg-white text-gray-800 p-4 rounded-xl shadow-lg flex items-center justify-center space-x-3 transform transition-transform duration-200 hover:scale-105 hover:shadow-xl hover:bg-gray-100">
-                <i class="fas fa-calculator text-xl text-pink-500"></i>
-                <span class="font-semibold">One-Way ANOVA</span>
-            </a>
-
-            <!-- Correlation Button -->
-            <a href="https://mazenegykfs.github.io/Correlation/index.html" target="_blank" rel="noopener noreferrer" class="bg-white text-gray-800 p-4 rounded-xl shadow-lg flex items-center justify-center space-x-3 transform transition-transform duration-200 hover:scale-105 hover:shadow-xl hover:bg-gray-100">
-                <i class="fas fa-sync-alt text-xl text-indigo-500"></i>
-                <span class="font-semibold">Correlation</span>
-            </a>
-
-            <!-- MCQ Item Evaluator Button -->
-            <a href="https://mazenegykfs.github.io/MCQ-Item-Evaluator/" target="_blank" rel="noopener noreferrer" class="bg-white text-gray-800 p-4 rounded-xl shadow-lg flex items-center justify-center space-x-3 transform transition-transform duration-200 hover:scale-105 hover:shadow-xl hover:bg-gray-100">
-                <i class="fas fa-tasks text-xl text-purple-500"></i>
-                <span class="font-semibold">MCQ Item Evaluator</span>
-            </a>
-            
-            <!-- Item Analysis Button -->
-            <a href="https://mazenegykfs.github.io/item-Analysis/" target="_blank" rel="noopener noreferrer" class="bg-white text-gray-800 p-4 rounded-xl shadow-lg flex items-center justify-center space-x-3 transform transition-transform duration-200 hover:scale-105 hover:shadow-xl hover:bg-gray-100">
-                <i class="fas fa-tasks text-xl text-green-500"></i>
-                <span class="font-semibold">Item Analysis</span>
-            </a>
-
-            <!-- Questionnaire Advanced Button -->
-            <a href="https://mazenegykfs.github.io/questionnaire_advanced/" target="_blank" rel="noopener noreferrer" class="bg-white text-gray-800 p-4 rounded-xl shadow-lg flex items-center justify-center space-x-3 transform transition-transform duration-200 hover:scale-105 hover:shadow-xl hover:bg-gray-100">
-                <i class="fas fa-poll-h text-xl text-indigo-500"></i>
-                <span class="font-semibold"> Questionnaire Analysis </span>
-            </a>
-
-            <!-- Simple Questionnaire Button (NEW) -->
-            <a href="https://mazenegykfs.github.io/Simple_Questionnaire/" target="_blank" rel="noopener noreferrer" class="bg-white text-gray-800 p-4 rounded-xl shadow-lg flex items-center justify-center space-x-3 transform transition-transform duration-200 hover:scale-105 hover:shadow-xl hover:bg-gray-100">
-                <i class="fas fa-clipboard-list text-xl text-purple-500"></i>
-                <span class="font-semibold">Simple Questionnaire</span>
-            </a>
-
-            <!-- Excel Report Generator Button -->
-            <a href="https://mazenegykfs.github.io/excel_report_generator-v2/" target="_blank" rel="noopener noreferrer" class="bg-white text-gray-800 p-4 rounded-xl shadow-lg flex items-center justify-center space-x-3 transform transition-transform duration-200 hover:scale-105 hover:shadow-xl hover:bg-gray-100">
-                <i class="fas fa-file-excel text-xl text-pink-500"></i>
-                <span class="font-semibold">Excel Report Generator</span>
-            </a>
-
-            <!-- New Button: Preferences and Placement -->
-            <a href="https://mazenegykfs.github.io/Placement-and-Preferences/" target="_blank" rel="noopener noreferrer" class="bg-white text-gray-800 p-4 rounded-xl shadow-lg flex items-center justify-center space-x-3 transform transition-transform duration-200 hover:scale-105 hover:shadow-xl hover:bg-gray-100">
-                <i class="fas fa-map-pin text-xl text-indigo-500"></i>
-                <span class="font-semibold">Preferences and Placement</span>
-            </a>
-
+        <main class="grid">
+            <a href="https://mazenegykfs.github.io/t-test/" class="tool-button">t-Test Calculator</a>
+            <a href="https://mazenegykfs.github.io/Non-Parametric/" class="tool-button">Non-Parametric Tests</a>
+            <a href="https://mazenegykfs.github.io/One-Way-ANOVA-Calculator/" class="tool-button">One-Way ANOVA</a>
+            <a href="https://mazenegykfs.github.io/Correlation/index.html" class="tool-button">Correlation Analysis</a>
+            <a href="https://mazenegykfs.github.io/MCQ-Item-Evaluator/" class="tool-button">MCQ Item Evaluator</a>
+            <a href="https://mazenegykfs.github.io/item-Analysis/" class="tool-button">Item Analysis</a>
+            <a href="https://mazenegykfs.github.io/questionnaire_advanced/" class="tool-button">Questionnaire Analysis</a>
+            <a href="https://mazenegykfs.github.io/Questionnaire-Multi-Analysis/" class="tool-button">Questionnaire Multi-Analysis</a>
+            <a href="https://mazenegykfs.github.io/Simple_Questionnaire/" class="tool-button">Simple Questionnaire</a>
+            <a href="https://mazenegykfs.github.io/excel_report_generator-v2/" class="tool-button">Excel Report Generator</a>
+            <a href="https://mazenegykfs.github.io/Placement-and-Preferences/" class="tool-button">Preferences and Placement</a>
         </main>
     </div>
 
+    <footer>
+        <div class="footer-text">All rights are reserved to Dr. Mazen Badawy – Doctorate of English Teaching & Testing</div>
+    </footer>
+
 </body>
 </html>
-
-
