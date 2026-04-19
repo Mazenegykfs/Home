@@ -1,142 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educational Research Statistical Package (ERSP)</title>
-    
-    <!-- Tailwind CSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    
-    <!-- Google Font for a clean look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #e0f2fe; /* Light Blue Background */
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Bouncy Hover scale transition */
-        .hover-zoom {
-            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            will-change: transform;
-        }
-        .hover-zoom:hover {
-            transform: scale(1.05);
-        }
-        
-        /* Custom scrollbar for a polished look */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #e0f2fe;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #94a3b8;
-            border-radius: 4px;
-        }
-    </style>
-</head>
-<body class="min-h-screen flex flex-col items-center p-4 sm:p-6 box-border">
-    
-    <!-- Main Container -->
-    <!-- Reduced padding and gap to fit more content on screen without scrolling -->
-    <div class="relative w-full max-w-7xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-3xl shadow-2xl p-6 sm:p-8 hover-zoom flex-grow flex flex-col justify-center">
-        
-        <!-- Logo Image -->
-        <img src="00.png" alt="ERSP Logo" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-12 h-12 sm:w-16 sm:h-16 rounded-lg shadow-xl object-cover border-2 border-white bg-white" onerror="this.src='https://via.placeholder.com/64?text=ERSP'">
-        
-        <!-- Header Section -->
-        <header class="text-center text-white mb-6 mt-8 sm:mt-2">
-            <!-- Thin Title as requested -->
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extralight tracking-tight mb-2 drop-shadow-sm">
-                Educational Research Statistical Package (ERSP)
-            </h1>
-            <p class="text-base sm:text-lg lg:text-xl font-light opacity-90">
-                Developed by Dr. Mazen Badawy – Doctorate of English Teaching & Testing
-            </p>
-        </header>
-
-        <!-- Buttons Grid -->
-        <!-- Adjusted to 4 columns on extra-large screens to prevent vertical scrolling -->
-        <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full">
-            
-            <a href="https://mazenegykfs.github.io/t-test/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">
-                <i class="fas fa-chart-bar text-2xl w-8 text-center"></i>
-                <span class="font-medium text-lg tracking-wide">t-Test</span>
-            </a>
-
-            <a href="https://mazenegykfs.github.io/Non-Parametric/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">
-                <i class="fas fa-chart-pie text-2xl w-8 text-center"></i>
-                <span class="font-medium text-lg tracking-wide">Non-Parametric</span>
-            </a>
-
-            <a href="https://mazenegykfs.github.io/One-Way-ANOVA-Calculator/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">
-                <i class="fas fa-calculator text-2xl w-8 text-center"></i>
-                <span class="font-medium text-lg tracking-wide">One-Way ANOVA</span>
-            </a>
-
-            <a href="https://mazenegykfs.github.io/Correlation/index.html" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">
-                <i class="fas fa-sync-alt text-2xl w-8 text-center"></i>
-                <span class="font-medium text-lg tracking-wide">Correlation</span>
-            </a>
-
-            <a href="https://mazenegykfs.github.io/MCQ-Item-Evaluator/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">
-                <i class="fas fa-tasks text-2xl w-8 text-center"></i>
-                <span class="font-medium text-lg tracking-wide">MCQ Item Evaluator</span>
-            </a>
-
-            <a href="https://mazenegykfs.github.io/item-Analysis/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">
-                <i class="fas fa-search-plus text-2xl w-8 text-center"></i>
-                <span class="font-medium text-lg tracking-wide">Item Analysis</span>
-            </a>
-
-            <a href="https://mazenegykfs.github.io/questionnaire_advanced/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">
-                <i class="fas fa-poll-h text-2xl w-8 text-center"></i>
-                <span class="font-medium text-lg tracking-wide">Questionnaire Analysis</span>
-            </a>
-
-            <a href="https://mazen19812002.github.io/Questionnaire-Multi-Scales-/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">
-                <i class="fas fa-layer-group text-2xl w-8 text-center"></i>
-                <span class="font-medium text-lg tracking-wide text-left leading-tight">Questionnaire Multi-Analysis</span>
-            </a>
-
-            <a href="https://mazenegykfs.github.io/Simple_Questionnaire/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">
-                <i class="fas fa-clipboard-list text-2xl w-8 text-center"></i>
-                <span class="font-medium text-lg tracking-wide">Simple Questionnaire</span>
-            </a>
-
-            <a href="https://mazenegykfs.github.io/excel_report_generator-v2/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">
-                <i class="fas fa-file-excel text-2xl w-8 text-center"></i>
-                <span class="font-medium text-lg tracking-wide">Excel Report Generator</span>
-            </a>
-
-            <a href="https://mazenegykfs.github.io/Placement-and-Preferences/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">
-                <i class="fas fa-map-pin text-2xl w-8 text-center"></i>
-                <span class="font-medium text-lg tracking-wide leading-tight text-left">Preferences and Placement</span>
-            </a>
-
-            <a href="https://mazenegykfs.github.io/Excel-Sheet-Divider/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30 lg:col-start-2 xl:col-start-auto">
-                <i class="fas fa-table text-2xl w-8 text-center"></i>
-                <span class="font-medium text-lg tracking-wide">Excel Sheet Divider</span>
-            </a>
-            
-        </main>
-    </div>
-
-    <!-- Branding Footer -->
-    <footer class="w-full text-center py-4 mt-auto text-slate-600 font-light text-sm tracking-wide">
-        All rights are reserved to Dr. Mazen Badawy – Doctorate of English Teaching & Testing
-    </footer>
-
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Educational Research Statistical Package (ERSP)</title>        <!-- Tailwind CSS for styling -->    <script src="https://cdn.tailwindcss.com"></script>        <!-- Font Awesome for icons -->    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">        <!-- Google Font for a clean look -->    <link rel="preconnect" href="https://fonts.googleapis.com">    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">        <style>        body {            font-family: 'Inter', sans-serif;            background-color: #e0f2fe; /* Light Blue Background */            margin: 0;            padding: 0;        }
+        /* Bouncy Hover scale transition */        .hover-zoom {            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);            will-change: transform;        }        .hover-zoom:hover {            transform: scale(1.05);        }                /* Custom scrollbar for a polished look */        ::-webkit-scrollbar {            width: 8px;        }        ::-webkit-scrollbar-track {            background: #e0f2fe;        }        ::-webkit-scrollbar-thumb {            background: #94a3b8;            border-radius: 4px;        }    </style></head><body class="min-h-screen flex flex-col items-center p-4 sm:p-6 box-border">        <!-- Main Container -->    <!-- Reduced padding and gap to fit more content on screen without scrolling -->    <div class="relative w-full max-w-7xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-3xl shadow-2xl p-6 sm:p-8 hover-zoom flex-grow flex flex-col justify-center">                <!-- Logo Image -->        <img src="00.png" alt="ERSP Logo" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-12 h-12 sm:w-16 sm:h-16 rounded-lg shadow-xl object-cover border-2 border-white bg-white" onerror="this.src='https://via.placeholder.com/64?text=ERSP'">                <!-- Header Section -->        <header class="text-center text-white mb-6 mt-8 sm:mt-2">            <!-- Thin Title as requested -->            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extralight tracking-tight mb-2 drop-shadow-sm">                Educational Research Statistical Package (ERSP)            </h1>            <p class="text-base sm:text-lg lg:text-xl font-light opacity-90">                Developed by Dr. Mazen Badawy – Doctorate of English Teaching & Testing            </p>        </header>
+        <!-- Buttons Grid -->        <!-- Adjusted to 4 columns on extra-large screens to prevent vertical scrolling -->        <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full">                        <a href="https://mazenegykfs.github.io/t-test/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">                <i class="fas fa-chart-bar text-2xl w-8 text-center"></i>                <span class="font-medium text-lg tracking-wide">t-Test</span>            </a>
+            <a href="https://mazenegykfs.github.io/Non-Parametric/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">                <i class="fas fa-chart-pie text-2xl w-8 text-center"></i>                <span class="font-medium text-lg tracking-wide">Non-Parametric</span>            </a>
+            <a href="https://mazenegykfs.github.io/One-Way-ANOVA-Calculator/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">                <i class="fas fa-calculator text-2xl w-8 text-center"></i>                <span class="font-medium text-lg tracking-wide">One-Way ANOVA</span>            </a>
+            <a href="https://mazenegykfs.github.io/Correlation/index.html" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">                <i class="fas fa-sync-alt text-2xl w-8 text-center"></i>                <span class="font-medium text-lg tracking-wide">Correlation</span>            </a>
+            <a href="https://mazenegykfs.github.io/MCQ-Item-Evaluator/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">                <i class="fas fa-tasks text-2xl w-8 text-center"></i>                <span class="font-medium text-lg tracking-wide">MCQ Item Evaluator</span>            </a>
+            <a href="https://mazenegykfs.github.io/item-Analysis/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">                <i class="fas fa-search-plus text-2xl w-8 text-center"></i>                <span class="font-medium text-lg tracking-wide">Item Analysis</span>            </a>
+            <a href="https://mazenegykfs.github.io/questionnaire_advanced/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">                <i class="fas fa-poll-h text-2xl w-8 text-center"></i>                <span class="font-medium text-lg tracking-wide">Questionnaire Analysis</span>            </a>
+            <a href="https://mazen19812002.github.io/Questionnaire-Multi-Scales-/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">                <i class="fas fa-layer-group text-2xl w-8 text-center"></i>                <span class="font-medium text-lg tracking-wide text-left leading-tight">Questionnaire Multi-Analysis</span>            </a>
+            <a href="https://mazenegykfs.github.io/Simple_Questionnaire/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">                <i class="fas fa-clipboard-list text-2xl w-8 text-center"></i>                <span class="font-medium text-lg tracking-wide">Simple Questionnaire</span>            </a>
+            <a href="https://mazenegykfs.github.io/excel_report_generator-v2/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">                <i class="fas fa-file-excel text-2xl w-8 text-center"></i>                <span class="font-medium text-lg tracking-wide">Excel Report Generator</span>            </a>
+            <a href="https://mazenegykfs.github.io/Placement-and-Preferences/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">                <i class="fas fa-map-pin text-2xl w-8 text-center"></i>                <span class="font-medium text-lg tracking-wide leading-tight text-left">Preferences and Placement</span>            </a>
+            <a href="https://mazenegykfs.github.io/Excel-Sheet-Divider/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30 lg:col-start-2 xl:col-start-auto">                <i class="fas fa-table text-2xl w-8 text-center"></i>                <span class="font-medium text-lg tracking-wide">Excel Sheet Divider</span>            </a>
+            <a href="https://mazenegykfs.github.io/Multi-Correlations/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 rounded-xl shadow-lg flex items-center justify-start px-6 space-x-4 hover-zoom hover:bg-green-400 border border-green-400/30">                <i class="fas fa-project-diagram text-2xl w-8 text-center"></i>                <span class="font-medium text-lg tracking-wide">Multi-Correlations</span>            </a>                    </main>    </div>
+    <!-- Branding Footer -->    <footer class="w-full text-center py-4 mt-auto text-slate-600 font-light text-sm tracking-wide">        All rights are reserved to Dr. Mazen Badawy – Doctorate of English Teaching & Testing    </footer>
+</body></html>
